@@ -87,14 +87,10 @@ reg add "HKCU\Software\Microsoft\Command Processor" /v DefaultColor /t REG_DWORD
 SETX PROMPT $+$M$_$P$_$$$S
 ```
 
-<<<<<<< HEAD
 ## Warning
 > Using SETX with varaible will set the current value not future values
 
 > Recommended to use **rundll32 sysdm.cpl,EditEnvironmentVariables** instead
-=======
-## Others
->>>>>>> c0733794e3ef8367bbe44bd6adf91c2a3144a818
 
 ### Open Environment Variable for user
 ```bash
