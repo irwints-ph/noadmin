@@ -4,11 +4,15 @@
 
 ### Install [pyenv-win](https://github.com/pyenv-win/pyenv-win)
 
-```powershell
-# allow to run powershell script for user
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+`allow to run powershell script for user`
 
-#download and install pyenv
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+`download and install pyenv`
+
+```powershell
 Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 ```
 
