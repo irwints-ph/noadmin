@@ -24,7 +24,7 @@
 	```
 6. Add %MYSQL_ROOT%\bin to environment variable
 	```bash
-	ev
+	rundll32 sysdm.cpl,EditEnvironmentVariables
 	%MYSQL_ROOT%\bin
 	```
 	
