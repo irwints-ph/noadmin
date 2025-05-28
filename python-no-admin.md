@@ -36,6 +36,7 @@ python -m venv %userprofile%/.venv/fastapi
 python.exe -m pip install --upgrade pip
 ```
 
+### Install modules on Virtual Environment
 ```bash
 python -m pip install fastapi uvicorn
 ```
