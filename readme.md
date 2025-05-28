@@ -1,4 +1,4 @@
-# Non Admin Installs
+# No Windows Admin Installs
 1. [VSCode](#installing-vscode)
 2. [Git](#installing-git)
 3. [dotnet](dotnet-no-admin.md)
@@ -10,15 +10,18 @@
 1. [Others](#others)
 
 ### Installing VSCode
-1. Download [VSCode][1] windows .zip version 
-  ![vscode-select](img/vscode-zip.png)
+1. Download [VSCode][1] windows .zip version
+
+    ![vscode-select](img/vscode-zip.png)
 1. Extract to c:\sw\code
 1. Add c:\sw\code\bin to [path](#adding-to-path)
 
 ### Installing Git
 1. Download [git][2] portable
+
   ![git-select](img/git-portable.png)
-1. Extract to C:\sw\PortableGit
+
+2. Extract to C:\sw\PortableGit
 1. Add C:\sw\PortableGit and C:\sw\PortableGit\bin to [path](#setup-environment-variables)
 1. configure git in VS Code
 
@@ -31,8 +34,13 @@
   ![settings.json][4]
 
   `"git.path": "C:\\sw\\PortableGit\\bin\\git.exe"`
+  
 3. save and re-open git
-> User manager for login on 1st use
+   
+`User manager for login on 1st use`
+
+![git-manager](img/vsc-git-credential.png)
+
 
 ## VSCode configuration for all projects
 `%userprofile%\AppData\Roaming\Code\User\settings.json`
@@ -57,6 +65,11 @@
 ```bash
 setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
 ```
+## Warning
+> Using SETX with varaible will set the current value not future values
+
+> Recommended to use **rundll32 sysdm.cpl,EditEnvironmentVariables** instead
+
 
 ## Install VSCode extensions
 ```bash
@@ -74,10 +87,14 @@ reg add "HKCU\Software\Microsoft\Command Processor" /v DefaultColor /t REG_DWORD
 SETX PROMPT $+$M$_$P$_$$$S
 ```
 
+<<<<<<< HEAD
 ## Warning
 > Using SETX with varaible will set the current value not future values
 
 > Recommended to use **rundll32 sysdm.cpl,EditEnvironmentVariables** instead
+=======
+## Others
+>>>>>>> c0733794e3ef8367bbe44bd6adf91c2a3144a818
 
 ### Open Environment Variable for user
 ```bash
