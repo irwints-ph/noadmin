@@ -1,10 +1,11 @@
 # Non Admin Installs
 1. [VSCode](#installing-vscode)
 2. [Git](#installing-git)
-3. [dotnet](#install-dotnet)
-4. [Python](#install-python)
-    - [pyenv-win](#install-pyenv-win)
-5. [PostgreSQL](#install-postgresql)
+3. [dotnet](dotnet-no-admin.md)
+4. [Python](python-no-admin.md#python)
+    - [pyenv-win](python-no-admin.md#install-pyenv-win)
+5. [PostgreSQL](postgresql-no-admin.md)
+6. [MySQL](mysql-no-admin.md)
 1. [Warning](#warning)
 1. [Others](#others)
 
@@ -57,133 +58,6 @@
 setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
 ```
 
-## Install Dotnet
-- Download the .NET SDK or Runtime binaries from the [Microsoft website][dn]. 
-  - [Windows Version SDK 8][dn8w]
-- Unzip the contents of the downloaded archive and move to C:\sw\dotnet
-- [Setup dotnet environment Variables](#dotnet)
-
-### Dotnet environment Variables
-```bash
-setx DOTNETBIN C:\sw\dotnet\sdk-8.0.410-win-x64
-rundll32 sysdm.cpl,EditEnvironmentVariables
-```
-`add %DOTNETBIN% to path`
-
-### dotnet-ef
-```bash
-dotnet tool install --global dotnet-ef --version 9.0.5
-
-SETX DOTNET_ROOT %DOTNETBIN%
-```
-> Rename DOTNETBIN DOTNET_ROOT
-
-## Python
-`Disable from Microsoft Store App Installer python and pyhton3`
-  - Settings > Apps > Advanced app settings > App execution aliases
-
-### Install [pyenv-win](https://github.com/pyenv-win/pyenv-win)
-
-```powershell
-# allow to run powershell script for user
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-#download and install pyenv
-Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
-```
-
-### Install Python
-```bash
-pyenv install 3.13.3
-pyenv global 3.13.3
-pyenv version
-```
-
-### Install Virtual Environment
-```bash
-python -m venv %userprofile%/.venv/fastapi
-```
-
-### Activate the virtual environment
-```bash
-%userprofile%/.venv/fastapi/Scripts/activate
-python.exe -m pip install --upgrade pip
-```
-
-```bash
-python -m pip install fastapi uvicorn
-```
-
-`.vscode\settings.json`
-```json
-{
-  "python.defaultInterpreterPath":"~/.venv/fastapi/Scripts/python.exe"
-}
-```
-`.vscode\launch.json`
-```json
-{
-  "configurations": [
-    {
-      "name": "Run Main",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "main.py",
-      "console": "integratedTerminal"
-    },
-    {
-      "name": "FastAPI App",
-      "type": "debugpy",
-      "request": "launch",
-      "module": "uvicorn",
-      "cwd": "${workspaceFolder}/",
-      // args per command separated by space indicated by comma      
-      "args": [
-        "main:app",
-        "--reload"
-      ]
-    }    
-  ]
-}
-```
-
-## PostgreSQL
-
-### Install PostgreSQL
-```bash
-mkdir C:\SW\DB\PostgreSQL
-```
-
-1. [Download binaries][pgsb] and extract to to C:\SW\DB\PostgreSQL
-2. Add C:\SW\DB\PostgreSQL\pgsql\bin to PATH
-  ```bash
-  setx PATH "%PATH%;C:\SW\DB\PostgreSQL\pgsql\bin"
-  ```
-
-### Test the installation 
-```bash
-postgres -V
-psql -V
-```
-
-### Create DB
-```bash
-set DBPATH=C:\SW\DB\PostgreSQL\data\pgdata
-initdb -D %DBPATH% -U postgres -W -E UTF8 -A scram-sha-256
-```
-
-### Start the PostgreSQL database
-```bash
-pg_ctl -D "%DBPATH%" -l logfile start
-```
-
-#### From
-```
-https://www.youtube.com/watch?v=cYFYfYXObgA
-https://tutlinks.com/install-postgresql-without-admin-rights-windows/#google_vignette
-```
-
-
 ## Install VSCode extensions
 ```bash
 code --install-extension humao.rest-client
@@ -205,8 +79,6 @@ SETX PROMPT $+$M$_$P$_$$$S
 
 > Recommended to use **rundll32 sysdm.cpl,EditEnvironmentVariables** instead
 
-## Others
-
 ### Open Environment Variable for user
 ```bash
 rundll32 sysdm.cpl,EditEnvironmentVariables
@@ -220,16 +92,6 @@ function prompt {
 }
 ```
 
-### Install NVM
-```bash
-start chrome https://github.com/coreybutler/nvm-windows/
-
-nvm install 10.15.3
-sudo nvm use 10.15.3
-npm install -g json-server@0.16.3
-npm install -g @angular/cli@7.3.5
-```
-
 ```explorer
 %userprofile%\.vscode\extensions
 %userprofile%\AppData\Roaming\Code\User\settings.json
@@ -239,6 +101,3 @@ npm install -g @angular/cli@7.3.5
 [2]:https://git-scm.com/downloads/win
 [3]:img/vsc-git-path.png
 [4]:img/vsc-git-path-save.png
-[dn]:https://dotnet.microsoft.com/en-us/download/dotnet
-[dn8w]:https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.410-windows-x64-binaries
-[pgsb]:https://www.enterprisedb.com/download-postgresql-binaries
