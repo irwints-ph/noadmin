@@ -33,8 +33,13 @@
   ![settings.json][4]
 
   `"git.path": "C:\\sw\\PortableGit\\bin\\git.exe"`
+  
 3. save and re-open git
-> User manager for login on 1st use
+   
+`User manager for login on 1st use`
+
+![git-manager](img/vsc-git-credential.png)
+
 
 ## VSCode configuration for all projects
 `%userprofile%\AppData\Roaming\Code\User\settings.json`
@@ -59,6 +64,11 @@
 ```bash
 setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
 ```
+## Warning
+> Using SETX with varaible will set the current value not future values
+
+> Recommended to use **rundll32 sysdm.cpl,EditEnvironmentVariables** instead
+
 
 ## Install Dotnet
 - Download the .NET SDK or Runtime binaries from the [Microsoft website][dn]. 
@@ -202,11 +212,6 @@ reg add "HKCU\Software\Microsoft\Command Processor" /v DefaultColor /t REG_DWORD
 
 SETX PROMPT $+$M$_$P$_$$$S
 ```
-
-## Warning
-> Using SETX with varaible will set the current value not future values
-
-> Recommended to use **rundll32 sysdm.cpl,EditEnvironmentVariables** instead
 
 ## Others
 
