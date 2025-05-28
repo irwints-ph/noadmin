@@ -2,7 +2,7 @@
 `Disable from Microsoft Store App Installer python and pyhton3`
   - Settings > Apps > Advanced app settings > App execution aliases
 
-### Install [pyenv-win](https://github.com/pyenv-win/pyenv-win)
+### Install [pyenv-win](https://github.com/pyenv-win/pyenv-win) from `powershell`
 
 `allow to run powershell script for user`
 
