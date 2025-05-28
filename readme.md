@@ -1,4 +1,4 @@
-# Non Admin Installs
+# No Windows Admin Installs
 1. [VSCode](#installing-vscode)
 2. [Git](#installing-git)
 3. [dotnet](#install-dotnet)
