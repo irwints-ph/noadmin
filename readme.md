@@ -9,15 +9,18 @@
 1. [Others](#others)
 
 ### Installing VSCode
-1. Download [VSCode][1] windows .zip version 
-  ![vscode-select](img/vscode-zip.png)
+1. Download [VSCode][1] windows .zip version
+
+    ![vscode-select](img/vscode-zip.png)
 1. Extract to c:\sw\code
 1. Add c:\sw\code\bin to [path](#adding-to-path)
 
 ### Installing Git
 1. Download [git][2] portable
+
   ![git-select](img/git-portable.png)
-1. Extract to C:\sw\PortableGit
+
+2. Extract to C:\sw\PortableGit
 1. Add C:\sw\PortableGit and C:\sw\PortableGit\bin to [path](#setup-environment-variables)
 1. configure git in VS Code
 
