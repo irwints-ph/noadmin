@@ -52,7 +52,7 @@ log-error = "c:/sw/db/mysql/mysql-9.3.0/mysql-server-1.log"
 	exit
 	```
 
-9. Initialize DB
+9. Initialize DB : `Note the temporary root password that will be given`
 	```bash
 	mysqld --initialize --user=root --console
 	```
