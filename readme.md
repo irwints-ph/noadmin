@@ -77,7 +77,14 @@ code --install-extension humao.rest-client
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension ms-python.debugpy
 code --install-extension ritwickdey.liveserver
+code --github.copilot
+code --hediet.vscode-drawio
+code --yy0931.vscode-sqlite3-editor
+
 code --list-extensions
+
+code --github.copilot-chat
+
 ```
 
 ## Color and Prompt
