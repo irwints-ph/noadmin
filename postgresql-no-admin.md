@@ -99,3 +99,4 @@ VALUES ('Ford', 'Mustang', 1964);
 ```
 
 [pgsb]:https://www.enterprisedb.com/download-postgresql-binaries
+[tuto]:https://neon.com/postgresql/tutorial
