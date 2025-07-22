@@ -46,6 +46,8 @@ git push
 `User manager for login on 1st use`
 
 ![git-manager](img/vsc-git-credential.png)
+> Use browser
+
 
 ## VSCode configuration for all projects
 `%userprofile%\AppData\Roaming\Code\User\settings.json`

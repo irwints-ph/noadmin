@@ -16,3 +16,9 @@ SETX NODE_ROOT c:\sw\node\node-v24.4.1-win-x64
 rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
 ![path](img/node-path.png)
+
+4. Save and Test
+```bash
+node --version
+```
+![Version](img/node-version.png)
