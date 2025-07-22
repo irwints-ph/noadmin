@@ -36,16 +36,17 @@
   `"git.path": "C:\\sw\\PortableGit\\bin\\git.exe"`
   
 3. save and re-open git
-   
+
+```bash
+git config user.name "[your name]"
+git config user.email "[your email]"
+git push
+```
+
 `User manager for login on 1st use`
 
 ![git-manager](img/vsc-git-credential.png)
 
-4. Or in CMD
-```bash
-git config user.name "[your name]"
-git config user.email "[your email]"
-```
 ## VSCode configuration for all projects
 `%userprofile%\AppData\Roaming\Code\User\settings.json`
 ```json
