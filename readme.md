@@ -41,7 +41,11 @@
 
 ![git-manager](img/vsc-git-credential.png)
 
-
+4. Or in CMD
+```bash
+git config user.name "[your name]"
+git config user.email "[your email]"
+```
 ## VSCode configuration for all projects
 `%userprofile%\AppData\Roaming\Code\User\settings.json`
 ```json
