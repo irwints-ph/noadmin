@@ -16,6 +16,25 @@
 1. Extract to c:\sw\code
 1. Add c:\sw\code\bin to [path](#adding-to-path)
 
+---
+### Windows 10
+
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode\command]
+@="\"C:\\sw\\code\\bin\\Code.exe\" \"%1\""
+"Icon"="C:\\sw\\code\\bin\\Code.exe"
+```
+```reg
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\Open in Terminal\command]
+@="cmd.exe /K cd \"%V\""
+"Icon"="%SystemRoot%\\System32\\shell32.dll,40"
+```
+---
+
 ### Installing Git
 1. Download [git][2] portable
 
@@ -128,3 +147,4 @@ function prompt {
 [2]:https://git-scm.com/downloads/win
 [3]:img/vsc-git-path.png
 [4]:img/vsc-git-path-save.png
+
