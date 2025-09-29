@@ -9,6 +9,7 @@ A comprehensive guide for installing development tools and databases on Windows 
 3. [Development Tools](#development-tools)
    - [VSCode](#installing-vscode)
    - [Git](#installing-git)
+   - [Notepad++](notepadpp-no-admin.md)
    - [.NET SDK](dotnet-no-admin.md)
    - [Python](python-no-admin.md)
    - [Node.js](node-no-admin.md)
@@ -190,6 +191,36 @@ Git is essential for version control and can be installed using the portable ver
    - **Git Credential Manager for Windows** (older): Shows dialog first
    - **Portable Git**: May not include credential manager
    - **Fallback**: Use Personal Access Token if browser auth fails
+
+---
+
+### Installing Notepad++
+
+Notepad++ is a powerful, lightweight text editor that supports syntax highlighting for numerous programming languages. The portable version can be installed without admin rights.
+
+#### Steps
+
+1. **Download Notepad++ Portable**
+   - Go to [Notepad++ Downloads](https://notepad-plus-plus.org/downloads/)
+   - Select the **Portable** version (64-bit or 32-bit)
+   
+2. **Extract and Install**
+   ```cmd
+   # Create directory structure
+   mkdir C:\sw\notepadpp
+   
+   # Extract downloaded zip to C:\sw\notepadpp
+   ```
+
+3. **Add to PATH (Optional)**
+   - Add `C:\sw\notepadpp` to your [PATH environment variable](#setup-environment-variables)
+
+4. **Verify Installation**
+   ```cmd
+   notepad++.exe
+   ```
+
+📖 **Complete Installation Guide:** [Notepad++ Installation](notepadpp-no-admin.md)
 
 ---
 
@@ -716,6 +747,7 @@ rundll32 sysdm.cpl,EditEnvironmentVariables
 - [.NET Installation Guide](dotnet-no-admin.md)
 - [Python Installation Guide](python-no-admin.md)
 - [Node.js Installation Guide](node-no-admin.md)
+- [Notepad++ Installation Guide](notepadpp-no-admin.md)
 - [Qodo Command CLI Installation Guide](qodo-cli-installation.md)
 - [PostgreSQL Installation Guide](postgresql-no-admin.md)
 - [MySQL Installation Guide](mysql-no-admin.md)
