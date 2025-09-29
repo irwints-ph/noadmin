@@ -12,6 +12,7 @@ A comprehensive guide for installing development tools and databases on Windows 
    - [.NET SDK](dotnet-no-admin.md)
    - [Python](python-no-admin.md)
    - [Node.js](node-no-admin.md)
+   - [Qodo Command CLI](qodo-cli-installation.md)
 4. [Databases](#databases)
    - [PostgreSQL](postgresql-no-admin.md)
    - [MySQL](mysql-no-admin.md)
@@ -189,6 +190,31 @@ Git is essential for version control and can be installed using the portable ver
    - **Git Credential Manager for Windows** (older): Shows dialog first
    - **Portable Git**: May not include credential manager
    - **Fallback**: Use Personal Access Token if browser auth fails
+
+---
+
+### Qodo Command CLI
+
+Qodo Command is a powerful command-line interface for building, running, and managing AI agents. It provides workflow automation, interactive chat mode, and tool integration capabilities.
+
+**Key Features:**
+- 🤖 Custom Agent Configuration
+- 🔄 Workflow Automation  
+- 🌐 Interactive Chat Mode
+- 💻 Web UI Mode
+- 🔌 HTTP API Mode
+- 🔧 Tool Integration
+
+**Prerequisites:** Node.js (covered in [Node.js Installation Guide](node-no-admin.md))
+
+**Quick Installation:**
+```bash
+npm install -g @qodo/command
+qodo --version
+qodo login
+```
+
+📖 **Complete Installation Guide:** [Qodo Command CLI Installation](qodo-cli-installation.md)
 
 ---
 
@@ -690,5 +716,6 @@ rundll32 sysdm.cpl,EditEnvironmentVariables
 - [.NET Installation Guide](dotnet-no-admin.md)
 - [Python Installation Guide](python-no-admin.md)
 - [Node.js Installation Guide](node-no-admin.md)
+- [Qodo Command CLI Installation Guide](qodo-cli-installation.md)
 - [PostgreSQL Installation Guide](postgresql-no-admin.md)
 - [MySQL Installation Guide](mysql-no-admin.md)
