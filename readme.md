@@ -107,11 +107,88 @@ Git is essential for version control and can be installed using the portable ver
    ```
 
 6. **Test Git Integration**
-   - On first push, you'll see the credential manager
+
+   Git authentication has different methods depending on how you're using it:
+
+   **For Command Line Git (CLI):**
+   - GitHub requires **Personal Access Tokens** (not passwords)
+   - On first push, you'll be prompted for credentials:
+     - **Username:** Your GitHub username
+     - **Password:** Your Personal Access Token (not your GitHub password)
+
+   **For VSCode Git Integration:**
+   
+   The authentication experience varies by Windows version and Git installation:
+   
+   **Modern Experience (Windows 11 / Recent Git versions):**
+   - VSCode automatically opens your browser for GitHub authentication
+   - No credential manager dialog appears
+   - Browser authentication happens seamlessly
+   
+   **Legacy Experience (Windows 10 / Older Git versions):**
+   - You may see the Git Credential Manager dialog
    
    ![Git Credential Manager](img/vsc-git-credential.png)
    
-   - Choose "Use browser" for authentication
+   - Choose "**Use browser**" for authentication
+   - This will open your browser to authenticate with GitHub
+   
+   **What to Expect:**
+   - Browser opens automatically (with or without dialog)
+   - Login to GitHub in your browser
+   - VSCode receives authentication automatically
+   - No need to enter username/password manually
+
+   **Creating a Personal Access Token (for CLI use):**
+
+   1. **Go to GitHub Settings:**
+      - Visit [GitHub Personal Access Tokens](https://github.com/settings/tokens)
+      - Or: GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
+
+   2. **Generate New Token:**
+      - Click "Generate new token (classic)"
+      - Add a descriptive note (e.g., "Git CLI on Windows")
+      - Set expiration (recommended: 90 days or 1 year)
+      - Select scopes:
+        - ✅ `repo` (Full control of private repositories)
+        - ✅ `workflow` (Update GitHub Action workflows)
+        - ✅ `write:packages` (Upload packages to GitHub Package Registry)
+
+   3. **Copy and Save Token:**
+      - Click "Generate token"
+      - **Copy the token immediately** (you won't see it again)
+      - Store it securely (password manager recommended)
+
+   **Testing Git Authentication:**
+
+   ```bash
+   # Test with a simple clone (replace with your repo)
+   git clone https://github.com/yourusername/your-repo.git
+   
+   # Or test with an existing repo
+   git remote -v
+   git push origin main
+   ```
+
+   **Expected Authentication Prompts:**
+
+   **Command Line:**
+   ```
+   Username for 'https://github.com': yourusername
+   Password for 'https://yourusername@github.com': [paste your token here]
+   ```
+
+   **VSCode:**
+   - Browser window opens automatically (modern Git versions)
+   - Or credential manager dialog appears first (older versions)
+   - Login to GitHub in browser
+   - VSCode receives authentication automatically
+   
+   **Note about Git Credential Manager:**
+   - **Git Credential Manager Core** (newer): Direct browser authentication
+   - **Git Credential Manager for Windows** (older): Shows dialog first
+   - **Portable Git**: May not include credential manager
+   - **Fallback**: Use Personal Access Token if browser auth fails
 
 ---
 
@@ -566,6 +643,23 @@ $PROFILE.CurrentUserAllHosts
   1. Check `git.path` setting in VSCode
   2. Ensure Git is in PATH
   3. Restart VSCode after configuration changes
+
+#### Git Authentication Issues
+- **Problem:** "Authentication failed" or "remote: Support for password authentication was removed"
+- **Solution:** 
+  1. **For CLI:** Use Personal Access Token instead of password
+  2. **For VSCode:** Choose "Use browser" when prompted
+  3. Generate token at [GitHub Settings](https://github.com/settings/tokens)
+  4. Use token as password when prompted in CLI
+
+- **Problem:** VSCode keeps asking for credentials
+- **Solution:**
+  1. **If credential manager appears:** Choose "Use browser" option
+  2. **If no dialog appears:** Browser should open automatically
+  3. Complete authentication in browser (login to GitHub)
+  4. Check if Git Credential Manager Core is installed
+  5. Restart VSCode after authentication
+  6. **Alternative:** Use Personal Access Token in VSCode terminal if browser auth fails
 
 #### Permission Errors
 - **Problem:** Access denied when creating directories
