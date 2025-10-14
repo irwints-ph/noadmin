@@ -12,6 +12,7 @@ A comprehensive guide for installing PostgreSQL on Windows without administrator
 6. [User and Database Management](#user-and-database-management)
 7. [Testing and Verification](#testing-and-verification)
 8. [Troubleshooting](#troubleshooting)
+9. [PG Admin](#pg-admin---sql-gui-tool)
 
 ## Prerequisites
 
@@ -29,7 +30,7 @@ A comprehensive guide for installing PostgreSQL on Windows without administrator
 
 2. **Download ZIP Archive**
    - Download the ZIP file (not the installer)
-   - The file will be named something like `postgresql-16.1-1-windows-x64-binaries.zip`
+   - The file will be named something like `postgresql-18.0-2-windows-x64-binaries.zip`
 
 ## Installation Steps
 
@@ -355,13 +356,24 @@ pg_dump -U postgres -d testdb > backup.sql
 # Restore database
 psql -U postgres -d testdb < backup.sql
 ```
+## PG Admin - SQL Gui Tool
+![Location](img/pgadmin-location.png)
+![WaitScreen](img/pgadmin-wait.png)
 
+- Create New Connection
+
+![Connection-create](img/pgadmin-create-connection01.png)
+![Connection-general](img/pgadmin-register-general.png)
+![Connection-Connection](img/pgadmin-register-connection.png)
+![Connection](img/pgadmin-connection-sample.png)
 ### File Locations
 
 - **PostgreSQL Installation:** `C:\SW\DB\PostgreSQL\pgsql`
 - **Data Directory:** `C:\SW\DB\PostgreSQL\data\pgdata`
 - **Log Files:** `%DBPATH%\log\`
 - **Configuration:** `%DBPATH%\postgresql.conf`
+- **PGAdmin:** `C:\sw\db\PostgreSQL\pgsql\pgAdmin 4\runtime\pgAdmin4.exe`
+
 
 ## Best Practices
 
