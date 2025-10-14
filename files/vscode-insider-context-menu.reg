@@ -8,7 +8,7 @@ Windows Registry Editor Version 5.00
 @="\"C:\\sw\\code-insider\\Code - Insiders.exe\" \"%V\""
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode Insider]
-@="Open with VSCode"
+@="Open with VSCode Insider"
 "Icon"="C:\\sw\\code-insider\\Code - Insiders.exe"
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode Insider\command]

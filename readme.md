@@ -294,9 +294,9 @@ code --install-extension humao.rest-client
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension ms-python.debugpy
 code --install-extension ritwickdey.liveserver
-code --install-extension github.copilot
 code --install-extension hediet.vscode-drawio
 code --install-extension yy0931.vscode-sqlite3-editor
+code --install-extension github.copilot
 code --install-extension github.copilot-chat
 
 # List installed extensions
@@ -651,7 +651,7 @@ function prompt {
 Get-ExecutionPolicy
 
 # Set execution policy for current user
-
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 **Problem:** Profile doesn't load automatically
