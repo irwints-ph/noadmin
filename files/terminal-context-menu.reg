@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\Open in Terminal]
+@="Open in Terminal"
+"Icon"="%SystemRoot%\\System32\\cmd.exe"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\Open in Terminal\command]
+@="cmd.exe /K cd \"%V\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\Open in Terminal]
+@="Open in Terminal"
+"Icon"="%SystemRoot%\\System32\\cmd.exe"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\Open in Terminal\command]
+@="cmd.exe /K cd \"%V\""

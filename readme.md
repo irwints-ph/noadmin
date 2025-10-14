@@ -319,7 +319,7 @@ Registry tweaks allow you to add useful context menu options and customize Windo
 
 **Step 1: Create the Registry File**
 
-Create a file named `vscode-context-menu.reg`:
+Create a file named [vscode-context-menu.reg](files/vscode-context-menu.reg):
 
 ```cmd
 notepad vscode-context-menu.reg
@@ -346,7 +346,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode\command]
 @="\"C:\\sw\\code\\bin\\code.exe\" \"%V\""
 ```
-
+[Code Insider](files/vscode-insider-context-menu.reg)
 **Step 3: Apply the Registry Changes**
 
 1. **Double-click** `vscode-context-menu.reg`
@@ -363,7 +363,7 @@ Windows Registry Editor Version 5.00
 
 **Step 1: Create the Registry File**
 
-Create a file named `terminal-context-menu.reg`:
+Create a file named [terminal-context-menu.reg](files/terminal-context-menu.reg):
 
 ```cmd
 notepad terminal-context-menu.reg
@@ -405,12 +405,11 @@ Windows Registry Editor Version 5.00
 
 **Step 1: Create the Registry File**
 
-Create a file named `powershell-context-menu.reg`:
+Create a file named [powershell-context-menu.reg](files/powershell-context-menu.reg):
 
 ```cmd
 notepad powershell-context-menu.reg
 ```
-
 **Step 2: Add Registry Content**
 
 ```reg
@@ -589,6 +588,8 @@ function prompt {
    . $PROFILE
    ```
 
+> note to run [Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser]
+
 **What to Expect:**
 
 **Standard Version Output:**
@@ -650,7 +651,7 @@ function prompt {
 Get-ExecutionPolicy
 
 # Set execution policy for current user
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 ```
 
 **Problem:** Profile doesn't load automatically

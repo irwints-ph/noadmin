@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode]
+@="Open with VSCode"
+"Icon"="C:\\sw\\code\\Code.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode\command]
+@="\"C:\\sw\\code\\code.exe\" \"%V\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode]
+@="Open with VSCode"
+"Icon"="C:\\sw\\code\\Code.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode\command]
+@="\"C:\\sw\\code\\code.exe\" \"%V\""
