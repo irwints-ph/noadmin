@@ -103,6 +103,13 @@ initdb -D %DBPATH% -U postgres -W -E UTF8 -A scram-sha-256
 
 **You will be prompted to enter a password for the postgres user. Remember this password!**
 
+**Reset if needed**
+```bash
+pg_ctl -D "%DBPATH%" stop
+rmdir /q /s %DBPATH%
+initdb -D %DBPATH% -U postgres -W -E UTF8 -A scram-sha-256
+pg_ctl -D "%DBPATH%" -l logfile start
+```
 ## Server Management
 
 ### 1. Start PostgreSQL Server
@@ -374,6 +381,7 @@ psql -U postgres -d testdb < backup.sql
 - **Configuration:** `%DBPATH%\postgresql.conf`
 - **PGAdmin:** `C:\sw\db\PostgreSQL\pgsql\pgAdmin 4\runtime\pgAdmin4.exe`
 
+> Alternative is to install zip version of DB Beaver Community https://dbeaver.io/download/
 
 ## Best Practices
 
