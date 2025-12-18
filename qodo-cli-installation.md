@@ -9,6 +9,12 @@ qodo --version
 
 # Login to get started
 qodo login
+
+# Get Update Status
+qodo update --status
+
+# Get Help
+qodo --help
 ```
 
 ### COPILOT All Platforms
