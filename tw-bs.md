@@ -214,10 +214,6 @@ m-2 p-4 d-flex flex-column gap-4
 
 ---
 
-Great question — this is a **core concept** and once it clicks, Tailwind vs Bootstrap makes *way* more sense.
-
----
-
 ## What does **“utilities-first”** mean?
 
 **Utilities-first** means:
@@ -351,14 +347,4 @@ You can:
 
 * Use only bricks
 * Use only sets
-* Mix both (what you’re doing now 👍)
-
----
-
-If you want, I can show:
-
-* ❌ a *bad* utility-first example
-* ✅ a *good* utility-first example
-* 🔁 how to “think utilities-first” in Bootstrap
-
-Just tell me.
+* Mix both
