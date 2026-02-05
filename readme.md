@@ -17,7 +17,7 @@ A comprehensive guide for installing development tools and databases on Windows 
 4. [Databases](#databases)
    - [PostgreSQL](postgresql-no-admin.md)
    - [MySQL](mysql-no-admin.md)
-   - [SQLite Client](#sqlite-client)
+   - [SQLite Client for Windows](#sqlite-client-for-windows)
 5. [System Configuration](#system-configuration)
    - [Environment Variables](#setup-environment-variables)
    - [VSCode Configuration](#vscode-configuration-for-all-projects)
@@ -739,11 +739,25 @@ $PROFILE.CurrentUserAllHosts
 # Open environment variables GUI
 rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
-
-## SQLite Client
-1. [Download installer](files/sqlite3.zip)
+---
+## SQLite Client for Windows
+1. Double click this [link](files/sqlite3.zip) to download installer
+1. Click download raw file
+![dl-raw](img/download-raw-file.png)
+![dl-raw-zoom](img/download-raw-file-zoom.png)
 1. Extract to C:\SW\SQLite
 1. add C:\SW\SQLite to path
+1. Test if working (using cmd)
+```bash
+sqlite3 --version
+```
+![sqlite-version](img/sqlite-version.png)
+
+6. Open Gui Client
+```bash
+sl_gui
+```
+
 ---
 
 ## Related Links
