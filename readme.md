@@ -17,6 +17,7 @@ A comprehensive guide for installing development tools and databases on Windows 
 4. [Databases](#databases)
    - [PostgreSQL](postgresql-no-admin.md)
    - [MySQL](mysql-no-admin.md)
+   - [SQLite Client](#sqlite-client)
 5. [System Configuration](#system-configuration)
    - [Environment Variables](#setup-environment-variables)
    - [VSCode Configuration](#vscode-configuration-for-all-projects)
@@ -739,6 +740,10 @@ $PROFILE.CurrentUserAllHosts
 rundll32 sysdm.cpl,EditEnvironmentVariables
 ```
 
+## SQLite Client
+1. [Download installer](files/sqlite3.zip)
+1. Extract to C:\SW\SQLite
+1. add C:\SW\SQLite to path
 ---
 
 ## Related Links
