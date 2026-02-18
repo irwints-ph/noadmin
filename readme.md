@@ -494,7 +494,9 @@ Windows Registry Editor Version 5.00
 reg add "HKCU\Software\Microsoft\Command Processor" /v DefaultColor /t REG_DWORD /d 0x0a /f
 
 # Set custom prompt
-SETX PROMPT $+$M$_$P$_$$$S
+SETX PROMPT $+$M$_%COMPUTERNAME%$_$P$_$$$S
+
+SET PROMPT=$+$M$_%COMPUTERNAME%$_$P$_$$$S
 ```
 
 #### PowerShell Prompt Customization
