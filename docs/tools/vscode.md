@@ -128,7 +128,7 @@ Settings file location:
   "terminal.integrated.cursorBlinking": true
 }
 ```
-
+> See [VSCode System Configuration](../system/vscode-config.md#-full-recommended-vscode-configuration-golden-setup) for more information 
 ---
 
 ## 🔌 Install Extensions (Optional)
