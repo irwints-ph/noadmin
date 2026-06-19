@@ -161,6 +161,23 @@ After saving your profile:
 ```
 
 Or restart PowerShell.
+---
+
+## 🏷️ Version
+```powershell
+$PSVersionTable.PSVersion
+$PSVersionTable
+
+#Update
+winget install --id Microsoft.PowerShell --source winget
+
+pwsh
+if (!(Test-Path -Path $PROFILE)) {
+  New-Item -ItemType File -Path $PROFILE -Force
+}
+notepad $PROFILE
+. $PROFILE
+```
 
 ---
 
