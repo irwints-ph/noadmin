@@ -81,6 +81,7 @@ pyenv install 3.13.3
 
 # Set as global default
 pyenv global 3.13.3
+pyenv rehash
 
 # Verify installation
 pyenv version
@@ -155,7 +156,7 @@ Create `.vscode/settings.json` in your project root:
 
 ```json
 {
-  "python.defaultInterpreterPath": "~/.venv/fastapi/Scripts/python.exe"
+  "python.defaultInterpreterPath": "${env:USERPROFILE}/.venv/fastapi/Scripts/python.exe"
 }
 ```
 
@@ -205,9 +206,9 @@ code --install-extension ms-python.python
 code --install-extension ms-python.debugpy
 ```
 
-## Ubuntu Installation
+## Ubuntu / Windows Subsystem for Linux (WSL) Installation
 
-For Ubuntu/Linux systems, use the official pyenv installer:
+For Ubuntu or Windows Subsystem for Linux (WSL) environments, use the official pyenv installer:
 
 ### 1. Install Dependencies
 
@@ -239,9 +240,10 @@ exec "$SHELL"
 
 ```bash
 pyenv install --list
-pyenv install 3.13.4
+pyenv install 3.13.3
 pyenv versions
-pyenv global 3.13.4
+pyenv global 3.13.3
+pyenv rehash
 ```
 
 ## Troubleshooting

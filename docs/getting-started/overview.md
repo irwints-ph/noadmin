@@ -44,4 +44,47 @@ This avoids:
 
 ## 📁 Recommended Directory Structure
 
-All tools are installed under a single root folder:
+Use a single root folder (e.g., `C:\sw\`) to keep all tools organized and easy to manage:
+
+```
+C:\sw\
+ ├── vscode\
+ ├── git\
+ ├── notepadpp\
+ ├── dotnet\
+ ├── python\
+ ├── node\
+ ├── qodo\
+ ├── postgresql\
+ ├── mysql\
+ ├── sqlite\
+ └── config\
+      ├── env\
+      ├── vscode\
+      └── registry\
+```
+
+- **Tools**: Each tool gets its own folder for binaries and configs.  
+- **Databases**: Keep database installs separate for clarity.  
+- **Config**: Store reusable scripts, environment variable files, and registry tweaks here.  
+
+---
+
+## ✅ Verification Checklist
+
+After setup, confirm everything works by running:
+
+- `code --version` (VSCode)  
+- `git --version` (Git)  
+- `python --version` (Python)  
+- `node --version` (Node.js)  
+- `dotnet --version` (.NET SDK)  
+- `psql --version` (PostgreSQL)  
+
+---
+
+## 🔗 Next Steps
+
+- [Prerequisites](docs/getting-started/prerequisites.md) → Ensure your system is ready  
+- [VSCode Setup](docs/tools/vscode.md) → Start with your editor  
+- [System Configuration](docs/system/environment-variables.md) → Configure PATH and registry  

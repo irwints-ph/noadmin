@@ -1,0 +1,77 @@
+# ⚡ Docker Desktop + WSL Quick Start (Requires Admin)
+
+## 1. Prerequisites
+- Windows 10 (2004+) or Windows 11  
+- Admin rights (required for WSL & Docker Desktop)  
+- At least 4GB RAM free  
+- Internet connection  
+
+---
+
+## 2. Enable WSL & Virtualization
+Run PowerShell **as Administrator**:
+```cmd
+wsl --install
+```
+👉 This installs **WSL2** and the default Linux distribution (Ubuntu).  
+Verify:
+```cmd
+wsl --version
+```
+
+Enable virtualization in BIOS if not already enabled.
+
+---
+
+## 3. Install Docker Desktop
+1. Download from Docker Desktop for Windows [(docker.com in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fwww.docker.com%2Fproducts%2Fdocker-desktop%2F")  
+2. Run installer (requires admin)  
+3. During setup, select **WSL2 backend**  
+4. Restart system if prompted  
+
+---
+
+## 4. Configure WSL Integration
+Open Docker Desktop → **Settings → Resources → WSL Integration**  
+- Enable integration with your chosen distro (e.g., Ubuntu)  
+
+---
+
+## 5. Verify Installation
+```cmd
+docker --version
+docker run hello-world
+```
+
+Inside WSL:
+```bash
+docker run -it ubuntu bash
+```
+
+---
+
+## 6. Useful Commands
+```cmd
+# List containers
+docker ps -a
+
+# List images
+docker images
+
+# Remove container
+docker rm <container_id>
+
+# Remove image
+docker rmi <image_id>
+
+# Stop all containers
+docker stop $(docker ps -q)
+```
+
+---
+
+## 🔗 Related Links
+- [Docker Desktop Documentation](https://docs.docker.com/desktop/)  
+- [WSL Documentation](https://learn.microsoft.com/windows/wsl/)  
+- [Docker + WSL2 Setup Guide](https://docs.docker.com/desktop/wsl/)  
+- [Back to Main Guide](/readme.md)

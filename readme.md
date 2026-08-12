@@ -25,8 +25,8 @@ Install development tools on Windows without administrator privileges using port
 
 ## 🗄 Databases
 
-- [PostgreSQL](docs/databases/postgresql-no-admin.md)
-- [MySQL](docs/databases/mysql-no-admin.md)
+- [PostgreSQL](docs/databases/postgresql-no-admin.md) [Quick Start](docs/databases/posgresql-quickstart.md)
+- [MySQL](docs/databases/mysql-no-admin.md) - [Cheat Sheet](docs/databases/mysql-cheatsheet.md)
 - [SQLite](docs/databases/sqlite.md)
 
 ---
