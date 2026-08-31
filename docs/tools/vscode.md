@@ -4,10 +4,10 @@ Install VSCode without administrator privileges using the portable ZIP version.
 
 This setup:
 
-* Does not require admin rights
-* Is fully portable
-* Works from `C:\sw\vscode`
-* Integrates with Git, Node.js, Python, and other tools
+- Does not require admin rights
+- Is fully portable
+- Works from `C:\sw\vscode`
+- Integrates with Git, Node.js, Python, and other tools
 
 ---
 
@@ -15,13 +15,14 @@ This setup:
 
 Download from the official site:
 
-* https://code.visualstudio.com/download
+- https://code.visualstudio.com/download
 
 Select:
 
-* **Windows**
-* **.ZIP version (not installer)**
-![VSCode Download](../../img/vscode-zip.png)
+- **Windows**
+- **.ZIP version (not installer)**
+  ![VSCode Download](../../img/vscode-zip.png)
+
 ---
 
 ## 📦 Install VSCode (No Admin Required)
@@ -72,7 +73,7 @@ C:\sw\vscode\bin
 
 📖 See:
 
-* [Environment Variables](../system/environment-variables.md)
+- [Environment Variables](../system/environment-variables.md)
 
 ---
 
@@ -128,7 +129,9 @@ Settings file location:
   "terminal.integrated.cursorBlinking": true
 }
 ```
-> See [VSCode System Configuration](../system/vscode-config.md#-full-recommended-vscode-configuration-golden-setup) for more information 
+
+> See [VSCode System Configuration](../system/vscode-config.md#-full-recommended-vscode-configuration-golden-setup) for more information
+
 ---
 
 ## 🔌 Install Extensions (Optional)
@@ -137,6 +140,9 @@ Settings file location:
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools
 code --install-extension esbenp.prettier-vscode
+code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension ritwickdey.liveserver
+
 code --install-extension GitHub.copilot
 ```
 
@@ -144,6 +150,65 @@ List installed extensions:
 
 ```cmd id="vsc11"
 code --list-extensions
+```
+
+---
+
+## 🚀 Download VSCode Insiders (Portable Version)
+
+Download from the official site:
+
+- https://code.visualstudio.com/insiders/
+
+Select:
+
+- **Windows**
+- **.ZIP version (not installer)**
+
+> extract to
+
+```text id="vsc-insider"
+C:\sw\vscode-insiders\bin
+```
+
+> Add to path
+
+```text id="vsc-insider"
+C:\sw\vscode-insiders\bin
+```
+
+```text id="vsi.reg"
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode-insiders]
+@="Open with VSCode-insiders"
+"Icon"="C:\\sw\\vscode-insiders\\Code - Insiders.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode-insiders\command]
+@="\"C:\\sw\\vscode-insiders\\Code - Insiders.exe\" \"%V\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode-insiders]
+@="Open with VSCode-insiders"
+"Icon"="C:\\sw\\vscode-insiders\\Code - Insiders.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode-insiders\command]
+@="\"C:\\sw\\vscode-insiders\\Code - Insiders.exe\" \"%V\""
+```
+
+```bash
+code-insiders --install-extension ms-python.python
+code-insiders --install-extension ms-vscode.cpptools
+code-insiders --install-extension esbenp.prettier-vscode
+code-insiders --install-extension shd101wyy.markdown-preview-enhanced
+code-insiders --install-extension ritwickdey.liveserver
+
+code-insiders --install-extension GitHub.copilot
+
+code-insiders --list-extensions
+```
+
+```bash
+notepad %userprofile%\AppData\Roaming\Code - Insiders\User\settings.json
 ```
 
 ---
@@ -159,12 +224,13 @@ PATH not set correctly
 
 **Fix**
 
-* Add:
+- Add:
 
   ```
   C:\sw\vscode\bin
   ```
-* Restart terminal
+
+- Restart terminal
 
 ---
 
@@ -175,8 +241,8 @@ Portable version does not auto-register CLI tools
 
 **Fix**
 
-* Use PATH method (recommended)
-* Do not rely on installer-based integration
+- Use PATH method (recommended)
+- Do not rely on installer-based integration
 
 ---
 
@@ -184,9 +250,9 @@ Portable version does not auto-register CLI tools
 
 **Fix**
 
-* Ensure internet connection
-* Run VSCode once manually
-* Verify extension ID
+- Ensure internet connection
+- Run VSCode once manually
+- Verify extension ID
 
 ---
 
@@ -204,8 +270,8 @@ C:\sw\
 
 Then:
 
-* Add only required `bin` folders to PATH
-* Keep installations isolated and portable
+- Add only required `bin` folders to PATH
+- Keep installations isolated and portable
 
 ---
 
@@ -215,14 +281,14 @@ Then:
 
 ### 🛠 System Setup
 
-* [Environment Variables](../system/environment-variables.md)
-* [Registry Tweaks (Open with VSCode)](../system/registry-tweaks.md#-open-with-vscode#-open-with-vscode)
-* [VSCode System Configuration](../system/vscode-config.md)
+- [Environment Variables](../system/environment-variables.md)
+- [Registry Tweaks (Open with VSCode)](../system/registry-tweaks.md#-open-with-vscode#-open-with-vscode)
+- [VSCode System Configuration](../system/vscode-config.md)
 
 ---
 
 ### 🧰 Development Tools
 
-* [Git Setup](git.md)
-* [Node.js Setup](node.md)
-* [Python Setup](python.md)
+- [Git Setup](git.md)
+- [Node.js Setup](node.md)
+- [Python Setup](python.md)
