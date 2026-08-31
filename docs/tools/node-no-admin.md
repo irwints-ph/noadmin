@@ -45,7 +45,7 @@ mkdir C:\sw\node
 
 2. **Extract using PowerShell:**
    ```powershell
-   Expand-Archive -Path "%userprofile%\downloads\node-v24.4.1-win-x64.zip" -DestinationPath "C:\sw\node"
+   Expand-Archive -Path "$HOME\downloads\node-v24.4.1-win-x64.zip" -DestinationPath "C:\sw\node"
    ```
 
 3. **Or extract manually:**
