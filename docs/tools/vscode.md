@@ -142,6 +142,9 @@ code --install-extension ms-vscode.cpptools
 code --install-extension esbenp.prettier-vscode
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension ritwickdey.liveserver
+code --install-extension hediet.vscode-drawio
+code --install-extension humao.rest-client
+code --install-extension yy0931.vscode-sqlite3-editor
 
 code --install-extension GitHub.copilot
 ```
@@ -201,6 +204,9 @@ code-insiders --install-extension ms-vscode.cpptools
 code-insiders --install-extension esbenp.prettier-vscode
 code-insiders --install-extension shd101wyy.markdown-preview-enhanced
 code-insiders --install-extension ritwickdey.liveserver
+code-insiders --install-extension hediet.vscode-drawio
+code-insiders --install-extension humao.rest-client
+code-insiders --install-extension yy0931.vscode-sqlite3-editor
 
 code-insiders --install-extension GitHub.copilot
 
