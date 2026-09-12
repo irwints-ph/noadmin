@@ -27,6 +27,7 @@ VSCode stores user settings here:
 
 ```cmd id="vscconfigopen01"
 notepad %userprofile%\AppData\Roaming\Code\User\settings.json
+start notepad++ "%userprofile%\AppData\Roaming\Code - Insiders\User\settings.json"
 ```
 
 ### Method 2 (Inside VSCode)
@@ -120,6 +121,7 @@ This is the **final recommended configuration** for this environment:
 ```json id="vscconfigfinal02"
 {
   "git.path": "C:\\sw\\PortableGit\\bin\\git.exe",
+  "python.defaultInterpreterPath": "${env:USERPROFILE}/.venv/pb8/Scripts/python.exe",
 
   "editor.fontSize": 18,
   "editor.tabSize": 2,
@@ -129,16 +131,15 @@ This is the **final recommended configuration** for this environment:
   "editor.wordWrap": "on",
   "editor.formatOnSave": true,
 
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.fontSize": 18,
   "terminal.integrated.cursorBlinking": true,
 
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Dark+",
   "workbench.iconTheme": "vs-seti",
 
   "workbench.colorCustomizations": {
     "terminal.foreground": "#1AFF01",
-    "terminal.background": "#000000"
+    "terminal.background": "#000000",
   },
 
   "files.autoSave": "onFocusChange",
@@ -146,7 +147,30 @@ This is the **final recommended configuration** for this environment:
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
 
-  "hediet.vscode-drawio.resizeImages": null
+  "hediet.vscode-drawio.resizeImages": null,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe",
+      ],
+      "args": [],
+      "icon": "terminal-cmd",
+    },
+    "Git Bash": {
+      "source": "Git Bash",
+      "icon": "terminal-git-bash",
+    },
+    "Custom CMD": {
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "args": ["/k", "${env:USERPROFILE}/.venv/pb8/Scripts/activate.bat"],
+    },
+  },
 }
 ```
 
