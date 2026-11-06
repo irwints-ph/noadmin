@@ -61,8 +61,7 @@ C:\sw\PortableGit
 Add the following to **User PATH**:
 
 ```text id="git04"
-C:\sw\PortableGit
-C:\sw\PortableGit\bin
+C:\sw\PortableGit\cmd
 ```
 
 📖 Related:
@@ -86,7 +85,7 @@ where git
 Expected output:
 
 ```text id="git07"
-C:\sw\PortableGit\bin\git.exe
+C:\sw\PortableGit\cmd\git.exe
 ```
 
 ---
@@ -244,7 +243,7 @@ PATH not set correctly
 Ensure:
 
 ```text id="gitfix01"
-C:\sw\PortableGit\bin
+C:\sw\PortableGit\cmd
 ```
 
 Then restart terminal.
@@ -286,7 +285,7 @@ where git
 If multiple results appear:
 
 * Remove system Git from PATH
-* Keep only `C:\sw\PortableGit`
+* Keep `C:\sw\PortableGit\cmd` on PATH
 
 ---
 
@@ -296,8 +295,9 @@ Recommended structure:
 
 ```text id="gitbp01"
 C:\sw\
-  ├── vscode
-  ├── git
+  ├── code
+  ├── code-insiders
+  ├── PortableGit
   ├── node
   ├── python
 ```
@@ -305,7 +305,7 @@ C:\sw\
 Git-specific paths:
 
 ```text id="gitbp02"
-C:\sw\PortableGit\bin
+C:\sw\PortableGit\cmd
 ```
 
 ---

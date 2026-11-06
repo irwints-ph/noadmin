@@ -62,8 +62,9 @@ You will mainly work with:
 ### Example Paths
 
 ```text id="env02"
-C:\sw\vscode\bin
-C:\sw\git\bin
+C:\sw\code\bin
+C:\sw\code-insiders\bin
+C:\sw\PortableGit\cmd
 C:\sw\node
 C:\sw\python
 C:\sw\sqlite
@@ -82,8 +83,9 @@ C:\sw\
 Example:
 
 ```text id="env03b"
-C:\sw\vscode
-C:\sw\git
+C:\sw\code
+C:\sw\code-insiders
+C:\sw\PortableGit
 C:\sw\node
 C:\sw\python
 ```
@@ -130,13 +132,13 @@ Changes only apply to **new sessions**
 Wrong:
 
 ```text id="envbad1"
-C:\sw\git\git.exe
+C:\sw\PortableGit\cmd\git.exe
 ```
 
 Correct:
 
 ```text id="envgood1"
-C:\sw\git\bin
+C:\sw\PortableGit\cmd
 ```
 
 ---
@@ -168,7 +170,7 @@ User variables
 You can also modify PATH via command line:
 
 ```cmd id="env05"
-setx PATH "%PATH%;C:\sw\git\bin"
+setx PATH "%PATH%;C:\sw\PortableGit\cmd"
 ```
 
 > ⚠️ Warning:

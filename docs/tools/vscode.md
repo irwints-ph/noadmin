@@ -6,7 +6,7 @@ This setup:
 
 - Does not require admin rights
 - Is fully portable
-- Works from `C:\sw\vscode`
+- Works from `C:\sw\code`
 - Integrates with Git, Node.js, Python, and other tools
 
 ---
@@ -30,7 +30,7 @@ Select:
 ### Step 1: Create Directory
 
 ```cmd id="vsc01"
-mkdir C:\sw\vscode
+mkdir C:\sw\code
 ```
 
 ---
@@ -40,13 +40,13 @@ mkdir C:\sw\vscode
 Extract the downloaded ZIP into:
 
 ```text id="vsc02"
-C:\sw\vscode
+C:\sw\code
 ```
 
 Expected structure:
 
 ```text id="vsc03"
-C:\sw\vscode
+C:\sw\code
   ├── Code.exe
   ├── bin
   ├── resources
@@ -58,7 +58,7 @@ C:\sw\vscode
 ## ▶️ Run VSCode
 
 ```cmd id="vsc04"
-C:\sw\vscode\Code.exe
+C:\sw\code\Code.exe
 ```
 
 ---
@@ -68,7 +68,7 @@ C:\sw\vscode\Code.exe
 To run `code` from anywhere, add:
 
 ```text id="vsc05"
-C:\sw\vscode\bin
+C:\sw\code\bin
 ```
 
 📖 See:
@@ -171,13 +171,13 @@ Select:
 > extract to
 
 ```text id="vsc-insider"
-C:\sw\vscode-insiders\bin
+C:\sw\code-insiders
 ```
 
 > Add to path
 
 ```text id="vsc-insider"
-C:\sw\vscode-insiders\bin
+C:\sw\code-insiders\bin
 ```
 
 ```text id="vsi.reg"
@@ -185,17 +185,17 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode-insiders]
 @="Open with VSCode-insiders"
-"Icon"="C:\\sw\\vscode-insiders\\Code - Insiders.exe"
+"Icon"="C:\\sw\\code-insiders\\Code - Insiders.exe"
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode-insiders\command]
-@="\"C:\\sw\\vscode-insiders\\Code - Insiders.exe\" \"%V\""
+@="\"C:\\sw\\code-insiders\\Code - Insiders.exe\" \"%V\""
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode-insiders]
 @="Open with VSCode-insiders"
-"Icon"="C:\\sw\\vscode-insiders\\Code - Insiders.exe"
+"Icon"="C:\\sw\\code-insiders\\Code - Insiders.exe"
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode-insiders\command]
-@="\"C:\\sw\\vscode-insiders\\Code - Insiders.exe\" \"%V\""
+@="\"C:\\sw\\code-insiders\\Code - Insiders.exe\" \"%V\""
 ```
 
 ```bash
@@ -233,7 +233,7 @@ PATH not set correctly
 - Add:
 
   ```
-  C:\sw\vscode\bin
+  C:\sw\code\bin
   ```
 
 - Restart terminal

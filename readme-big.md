@@ -88,7 +88,7 @@ Git is essential for version control and can be installed using the portable ver
    ```
 
 3. **Add to PATH**
-   - Add both `C:\sw\PortableGit` and `C:\sw\PortableGit\bin` to your [PATH](#setup-environment-variables)
+   - Add `C:\sw\PortableGit\cmd` to your [PATH](#setup-environment-variables)
 
 4. **Configure Git in VSCode**
    - Open VSCode settings (`Ctrl + ,`)
@@ -256,7 +256,7 @@ qodo login
 
 #### Using Command Line (Quick Method)
 ```cmd
-setx PATH "%PATH%;C:\sw\PortableGit;C:\sw\PortableGit\bin;C:\sw\code\bin;"
+setx PATH "%PATH%;C:\sw\PortableGit\cmd;C:\sw\code\bin;C:\sw\code-insiders\bin;"
 ```
 
 #### Using GUI (Recommended Method)

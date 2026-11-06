@@ -69,17 +69,17 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode]
 @="Open with VSCode"
-"Icon"="C:\\sw\\vscode\\Code.exe"
+"Icon"="C:\\sw\\code\\Code.exe"
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\shell\Open with VSCode\command]
-@="\"C:\\sw\\vscode\\code.exe\" \"%V\""
+@="\"C:\\sw\\code\\Code.exe\" \"%V\""
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode]
 @="Open with VSCode"
-"Icon"="C:\\sw\\vscode\\Code.exe"
+"Icon"="C:\\sw\\code\\Code.exe"
 
 [HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\Open with VSCode\command]
-@="\"C:\\sw\\vscode\\code.exe\" \"%V\""
+@="\"C:\\sw\\code\\Code.exe\" \"%V\""
 ```
 
 **Expected Result**
@@ -96,7 +96,7 @@ Windows Registry Editor Version 5.00
   Make sure VSCode is actually installed at:
 
   ```
-  C:\sw\vscode\Code.exe
+  C:\sw\code\Code.exe
   ```
 
   If your installation is in a different location, update the path in the `.reg` file before applying.
@@ -110,13 +110,13 @@ Windows Registry Editor Version 5.00
   This means:
 
   ```
-  C:\\sw\\vscode\\Code.exe
+  C:\\sw\\code\\Code.exe
   ```
 
   actually represents:
 
   ```
-  C:\sw\vscode\Code.exe
+  C:\sw\code\Code.exe
   ```
 
   If you use a single backslash, the registry file may not work correctly.
@@ -250,7 +250,7 @@ taskkill /f /im explorer.exe && start explorer.exe
 
 **Fix**
 
-* Verify install path (e.g. `C:\sw\vscode\code.exe`)
+* Verify install path (e.g. `C:\sw\code\Code.exe`)
 * Update `.reg` file and reapply
 
 ---
